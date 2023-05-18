@@ -3,17 +3,20 @@ from pojistenec import Evidencer
 
 def main():
     evidencer = Evidencer()
+    prvni_opakovani = True
 
     while True:
-        input("Pokračujte libovolnou klávesou: ")  # Přidáme dotaz před každým opakováním cyklu
-
         print("\nMenu:")
         print("1. Vytvorit pojisteneho")
         print("2. Zobrazit seznam pojistenych")
         print("3. Vyhledat pojisteneho")
         print("4. Konec")
 
-        volba = input("Zadejte volbu (1-4): ")
+        if prvni_opakovani:
+            volba = input("Zadejte volbu (1-4): ")
+            prvni_opakovani = False
+        else:
+            volba = input("Pokracujte libovolnou klavesou nebo zadejte volbu (1-4): ")
 
         if volba == "1":
             jmeno = input("Jmeno: ")
