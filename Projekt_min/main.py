@@ -5,6 +5,8 @@ def main():
     evidencer = Evidencer()
 
     while True:
+        input("Pokračujte libovolnou klávesou: ")  # Přidáme dotaz před každým opakováním cyklu
+
         print("\nMenu:")
         print("1. Vytvorit pojisteneho")
         print("2. Zobrazit seznam pojistenych")
